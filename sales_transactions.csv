@@ -1,0 +1,60 @@
+%%R
+
+library(data.table)
+
+set.seed(200000)
+
+n <- 500000
+
+sales_transactions <- data.table(
+  TransactionID = 1:n,
+  CustomerID = sample(1000:9999, n, replace = TRUE),
+  CustomerName = paste0("Customer_", sample(1:10000, n, replace = TRUE)),
+  Gender = sample(c("Male", "Female"), n, replace = TRUE),
+  Age = sample(18:70, n, replace = TRUE),
+  ProductID = sample(100:999, n, replace = TRUE),
+  ProductName = paste0("Product_", sample(1:500, n, replace = TRUE)),
+  Category = sample(
+    c("Electronics", "Clothing", "Grocery", "Home", "Sports"),
+    n,
+    replace = TRUE
+  ),
+  Quantity = sample(1:10, n, replace = TRUE),
+  UnitPrice = round(runif(n, 100, 5000), 2),
+  Discount = round(runif(n, 0, 30), 2),
+  GST = round(runif(n, 5, 18), 2),
+  PaymentMethod = sample(
+    c("Cash", "Card", "UPI", "Net Banking"),
+    n,
+    replace = TRUE
+  ),
+  City = sample(
+    c("Chennai", "Madurai", "Coimbatore", "Trichy", "Salem"),
+    n,
+    replace = TRUE
+  ),
+  State = "Tamil Nadu",
+  OrderDate = sample(
+    seq.Date(
+      as.Date("2023-01-01"),
+      as.Date("2024-12-31"),
+      by = "day"
+    ),
+    n,
+    replace = TRUE
+  ),
+  SalesPerson = paste0(
+    "SP_",
+    sample(1:200, n, replace = TRUE)
+  )
+)
+
+# Save CSV file
+fwrite(
+  sales_transactions,
+  "sales_transactions.csv"
+)
+
+# Check dataset
+head(sales_transactions)
+dim(sales_transactions)
