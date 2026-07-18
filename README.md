@@ -252,44 +252,34 @@ The following plots were created:
 
 ## 1. Transactions by City
 
-File:
 
-```
-city_transactions.png
-```
+<img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/dc1e3153-5221-4deb-a760-84b1126ff10c" />
+
 
 Shows the number of transactions from each city.
 
 
 ## 2. Revenue by Product Category
 
-File:
+<img width="544" height="445" alt="image" src="https://github.com/user-attachments/assets/ff6cc420-bd89-4540-8d08-e9fe1d291726" />
 
-```
-category_revenue.png
-```
 
 Shows revenue contribution from each category.
 
 
 ## 3. Top 20 Customers
 
-File:
+<img width="526" height="436" alt="image" src="https://github.com/user-attachments/assets/d4138c65-4f6b-4d3d-8d9d-69a3dab7374a" />
 
-```
-top_customers.png
-```
 
 Displays customers generating maximum revenue.
 
 
 ## 4. Payment Method Distribution
 
-File:
 
-```
-payment_distribution.png
-```
+<img width="417" height="331" alt="image" src="https://github.com/user-attachments/assets/18f58cfb-989c-4425-91cb-ccc2dcb1f794" />
+
 
 Shows customer payment preferences.
 
